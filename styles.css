@@ -4,12 +4,16 @@ body {
   margin: 0;
   padding: 0;
   line - height: 1.6;
+  display: flex;
+  flex - direction: column;
+  align - items: center;
 }
 
 header {
   text - align: center;
   padding: 50px;
   background - color: #f4f4f4;
+  width: 100%;
 }
 
 header h1 {
@@ -17,7 +21,7 @@ header h1 {
 }
 
 .button - group {
-  text - align: center; /* 让按钮组内的按钮居中 */
+  text - align: center;
 }
 
 .button - group a {
@@ -33,23 +37,25 @@ header h1 {
 .description {
   padding: 50px;
   text - align: center;
+  width: 80%; /* 限定宽度，更好地居中 */
 }
 
 .demos {
   padding: 50px;
   text - align: center;
+  width: 80%; /* 限定宽度，更好地居中 */
 }
 
-.demo - row {
+.demo - container {
   display: flex;
   flex - wrap: wrap;
-  justify - content: center; /* 让demo - item在水平方向上居中排列 */
-  margin - top: 30px;
+  justify - content: center;
+  gap: 20px; /* 增加演示项之间的间距 */
 }
 
 .demo - item {
-  margin: 20px;
   width: 350px;
+  text - align: center; /* 让演示项内的内容也居中 */
 }
 
 .demo - item video {
