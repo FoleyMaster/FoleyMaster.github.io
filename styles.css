@@ -1,4 +1,4 @@
-/* 全局式 */
+/* 全局样式 */
 body {
   font - family: Arial, sans - serif;
   margin: 0;
@@ -14,6 +14,10 @@ header {
 
 header h1 {
   margin - bottom: 20px;
+}
+
+.button - group {
+  text - align: center; /* 让按钮组内的按钮居中 */
 }
 
 .button - group a {
@@ -39,7 +43,7 @@ header h1 {
 .demo - row {
   display: flex;
   flex - wrap: wrap;
-  justify - content: space - around;
+  justify - content: center; /* 让demo - item在水平方向上居中排列 */
   margin - top: 30px;
 }
 
