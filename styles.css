@@ -82,5 +82,15 @@ header h1 {
   }
 
   
+  .audio-container {
+    display: flex;
+    /* 可以根据需要添加间距 */
+    gap: 10px; 
+}
+
+.vggsoundplus{
+  padding: 20px;
+    width:70%;
+}
 
 
