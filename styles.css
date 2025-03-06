@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* /* 全局样式 */
 body {
   font - family: Arial, sans - serif;
   margin: 0;
@@ -55,3 +55,91 @@ header h1 {
 .demo - item video {
   width: 100%;
 }
+ */
+
+  /* 全局样式 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* font - family: Arial, sans - serif; */
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin: 0;
+    padding: 0;
+    line - height: 1.6;
+    min-height: 100vh;
+  }
+  
+header {
+    text - align: center;
+    padding: 20px;
+    background - color: #f4f4f4;
+  }
+  
+header h1 {
+    margin - bottom: 20px;
+    font-size:38px;
+  }
+  
+.author{
+  text - align: center; /* 让按钮组内的按钮居中 */
+  font-size: 20px;
+}
+
+  .button - group {
+    text - align: center; /* 让按钮组内的按钮居中 */
+  }
+  
+.button - group a {
+    display: inline - block;
+    padding: 10px 20px;
+    margin: 10px;
+    background - color: #007bff;
+    color: white;
+    text - decoration: none;
+    border - radius: 5px;
+  }
+  
+.description {
+    padding: 50px;
+    text - align: center;
+    width: 50%; /* 可根据需要调整宽度 */
+    /* max-width: 1200px; 可根据需要设置最大宽度 */
+    margin: 0 auto;
+    font-size:18px;
+  }
+  
+  .abs{
+    padding: 20px;
+    width:70%;
+    font-size:18px;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+  .demos {
+    
+    padding: 20px;
+    width:70%;
+  }
+  
+  .demo-row {
+    display: flex;  /* 使用 Flexbox 实现一行布局 */
+    justify-content: space-between;  /* 水平分布，每个视频之间有间距 */
+    flex-wrap: wrap;  /* 如果屏幕太小，视频会自动换行 */
+  }
+  
+  .demo-item {
+    padding:0px;
+    width: 20%;  设置每个视频占用的宽度，可以根据需要调整
+    margin: 10px 0;  /* 设置视频之间的垂直间距 */
+    text-align: center;  /* 中心对齐视频标题 */
+  }
+  
+  video {
+    width: 100%;  /* 视频宽度设置为容器的 100% */
+    height: auto;  /* 高度自动调整，保持视频的纵横比 */
+  }
+
+  
+
+
