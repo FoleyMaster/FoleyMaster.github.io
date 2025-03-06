@@ -5,79 +5,109 @@
   <meta charset="UTF - 8">
   <meta name="viewport" content="width=device-width, initial - scale=1.0">
   <link rel="stylesheet" href="styles.css">
+
+
   <title>Research Showcase</title>
 </head>
 
 <body>
   <!-- 标题和作1者信息部分 -->
   <header>
-    <h1>Diff - Foley: Synchronized Video - to - Audio Synthesis with Latent Diffusion Models</h1>
-    <p>Simian Luo<sup>1</sup>, Chuanhao Yan<sup>1</sup>, Chenxu Hu<sup>1</sup>, Hang Zhao<sup>1,2</sup></p>
-    <p><sup>1</sup>IIIS, Tsinghua University, <sup>2</sup>Shanghai Qi Zhi Institute</p>
-    <p>(NeurIPS 2023)</p>
-    <div class="button - group">
-      <a href="#" class="button">PAPER</a>
-      <a href="#" class="button">ARXIV</a>
-      <a href="#" class="button">CODE (COMING SOON)</a>
-    </div>
+    <h1>Foley Master: <br>High-Quality Video-to-Audio <br>Synthesis via MLLM-Augmented Prompt <br>Tuning and Joint Semantic-Temporal Adaptation</h1>
+    
   </header>
+
+  <div class="author">
+    <p>Liming Liang<sup>1</sup></p>
+    <p><sup>1</sup>Peking University</p>
+    <p>(interspeech 2025)</p>
+  </div> 
+  <br>
+  <div class="button - group">
+    <a href="#" class="button">PAPER</a>
+    <a href="#" class="button">ARXIV</a>
+    <a href="#" class="button">CODE (COMING SOON)</a>
+  </div>
 
   <!-- 内容简介部分 -->
   <section class="description">
-    <p>Here is a brief introduction about our research on synchronized video - to - audio synthesis. We use latent
-      diffusion models to achieve high - quality audio generation from videos.</p>
+    <p>Index Terms: Video-to-Audio Generation, Dataset Construction, Semantic and Temporal Alignment, Prompt Learning.</p>
+  </section>
+
+  <section class="abs">
+    <h2>Abstract</h2>
+    <hr>
+    <p>We study video-to-audio (V2A) generation, a critical task for automatically creating high-quality sound effects synchronized with silent video. Current V2A methods face three limitations: 
+    <ul>
+        <li>inadequate textual annotations in existing datasets</li>
+        <li>over-reliance on global video features</li>
+        <li>coarse temporal synchronization. To address these, we propose FoleyMaster with three key innovations</li>
+    </ul>
+    <p>To address these, we propose FoleyMaster with three key innovations:</p>
+    <ul>
+        <li>We introduce VGGSound Plus dataset with 197,955 videos annotated by Qwen2-VL-7B for fine-grained event descriptions</li>
+        <li>We develop a cross-attention semantic adapter integrating token-level text embeddings with global video features via prompt learning, enabling precise alignment between visual events and sound</li>
+        <li>We develop a probabilistic temporal adapter that adjusts audio generation based on action prominence replacing binary synchronization.</li>
+    </ul>
+    <p>Extensive experiments demonstrate that FoleyMaster achieves state-of-the-art V2A performance across all metrics. Demo and dataset are available.</p>
   </section>
 
   <!-- 演示部分 -->
   <section class="demos">
     <h2>Demos</h2>
-    <p>It is recommended to use earphones to hear the demos videos, raise the volume and zoom in the videos.</p>
-    <p>Note: We only demonstrate the SpecVQGAN baselines here. For Im2Wav, the results are similar to SpecVQGAN.</p>
-    <div class="demo - row">
-      <div class="demo - item">
-        <h3>Ground Truth</h3>
-        <video width="320" height="240" controls>
+    <hr>
+    <p style="font-size: 18px;">It is recommended to use earphones to hear the demos videos, raise the volume and zoom in the videos.</p>
+    
+    <br></br>
+    <div class="big-demo">
+      <video>
+        <source src="ex1.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+
+    <div class="demo-row">
+      <div class="demo-item">
+        <!-- <h3>Ground Truth</h3> -->
+        <video controls>
           <source src="video1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p>Playing Drum</p>
       </div>
-      <div class="demo - item">
-        <h3>Baseline</h3>
-        <video width="320" height="240" controls>
+      <div class="demo-item">
+        <!-- <h3>Baseline</h3> -->
+        <video controls>
           <source src="video2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p>Playing Drum</p>
       </div>
-      <div class="demo - item">
-        <h3>Sample1 (Ours)</h3>
-        <video width="320" height="240" controls>
+      <div class="demo-item">
+        <!-- <h3>Sample1 (Ours)</h3> -->
+        <video controls>
           <source src="video3.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p>Playing Drum</p>
       </div>
-      <div class="demo - item">
-        <h3>Sample2 (Ours)</h3>
-        <video width="320" height="240" controls>
-          <source src="video4.mp4" type="video/mp4">
+      <div class="demo-item">
+        <!-- <h3>Sample1 (Ours)</h3> -->
+        <video controls>
+          <source src="video3.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p>Playing Drum</p>
       </div>
-      <div class="demo - item">
-        <h3>Sample3 (Ours)</h3>
-        <video width="320" height="240" controls>
-          <source src="video5.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Playing Drum</p>
-      </div>
+      
     </div>
   </section>
 
-  <script src="script.js"></script>
+  
+ 
+
+<!--   <script src="script.js"></script> -->
 </body>
 
 </html>
