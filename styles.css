@@ -14,7 +14,7 @@ body {
     /* 设置背景图片不重复 */
     background-repeat: no-repeat;
     /* 设置背景图片宽度为 100%，高度自动（保留原图高度） */
-    background-size: 100% 16%;
+    background-size: 100% 17%;
   }
   
 header {
@@ -38,16 +38,22 @@ header h1 {
     
   }
   
-.button - group a {
-    display: inline - block;
-    padding: 10px 20px;
-    margin: 10px;
-    background - color: #007bff;
-    color: white;
-    text - decoration: none;
-    border - radius: 5px;
-    
-  }
+  .button-group a {
+    display: inline-block; /* 让按钮并排 */
+    padding: 12px 24px;
+    margin: 8px; /* 按钮间距 */
+    background-color: white; /* 白色背景 */
+    color: black; /* 黑色字体 */
+    text-decoration: underline; /* 去掉下划线 */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px; /* 圆角 */
+    border: 2px solid white; /* 黑色边框 */
+    transition: all 0.3s ease; /* 动画过渡 */
+}
+.button-group a:hover {
+  background-color: #f0f0f0; /* 鼠标悬停时变灰 */
+}
   
 /* .description {
     padding: 50px;
@@ -122,13 +128,13 @@ img {
   
   .littledemo-item {
     padding:0px;
-    width: 45%;  设置每个视频占用的宽度，可以根据需要调整
+    width: 47%;  设置每个视频占用的宽度，可以根据需要调整
     margin: 10px 0;  /* 设置视频之间的垂直间距 */
     text-align: center;  中心对齐视频标题
   }
   
   .demo-row {
-
+    margin-bottom: 180px;
     display: flex;  /* 使用 Flexbox 实现一行布局 */
     justify-content: space-between;  /* 水平分布，每个视频之间有间距 */
     flex-wrap: wrap;  /* 如果屏幕太小，视频会自动换行 */
@@ -136,7 +142,7 @@ img {
   
   .demo-item {
     padding:0px;
-    width: 20%;  设置每个视频占用的宽度，可以根据需要调整
+    width: 22%;  设置每个视频占用的宽度，可以根据需要调整
     margin: 10px 0;  /* 设置视频之间的垂直间距 */
     text-align: center;  /* 中心对齐视频标题 */
   }
