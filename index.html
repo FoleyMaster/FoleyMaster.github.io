@@ -13,8 +13,8 @@
 <body>
   <!-- 标题和作1者信息部分 -->
   <header>
-    <h1>Foley Master: <br>High-Quality Video-to-Audio <br>Synthesis via MLLM-Augmented Prompt <br>Tuning and Joint Semantic-Temporal Adaptation</h1>
-    
+    <br>
+    <h1 style="text-align: center;font-size:48px;">Foley Master: <br>High-Quality Video-to-Audio Synthesis<br> via MLLM-Augmented Prompt Tuning  <br>and Joint Semantic-Temporal Adaptation</h1>
   </header>
 
   <div class="author">
@@ -29,15 +29,18 @@
   </div>
 
   <!-- 内容简介部分 -->
-  <section class="description">
+  <!-- <section class="description">
     <p>Index Terms: Video-to-Audio Generation, Dataset Construction, Semantic and Temporal Alignment, Prompt Learning.</p>
-  </section>
+  </section> -->
 
   <section class="abs">
-    <h2>Abstract</h2>
+    <h2 style="text-align: center;">Abstract</h2>
     <hr>
-    <p>We study video-to-audio (V2A) generation, a critical task for automatically creating high-quality sound effects synchronized with silent video. Current V2A methods face three limitations: 
-    <ul>
+    <p>We study video-to-audio (V2A) generation, a critical task for automatically creating high-quality sound effects synchronized with silent video. Current V2A methods face three limitations: (1) inadequate textual annotations in existing datasets, 
+      (2) over-reliance on global video features, and (3) coarse temporal synchronization. To address these, we propose FoleyMaster with three key innovations: 1) We introduce VGGSound Plus dataset with 197,955 videos annotated by Qwen2-VL-7B for fine-grained event descriptions; 
+      2) We develop a cross-attention semantic adapter integrating token-level text embeddings with global video features via prompt learning, enabling precise alignment between visual events and sound; 3) We develop a probabilistic temporal adapter that adjusts audio generation based on action prominence replacing binary synchronization. Extensive 
+      experiments demonstrate that FoleyMaster achieves state-of-the-art V2A performance across all metrics. Demo and dataset are available.</p>
+    <!-- <ul>
         <li>inadequate textual annotations in existing datasets</li>
         <li>over-reliance on global video features</li>
         <li>coarse temporal synchronization. To address these, we propose FoleyMaster with three key innovations</li>
@@ -47,17 +50,45 @@
         <li>We introduce VGGSound Plus dataset with 197,955 videos annotated by Qwen2-VL-7B for fine-grained event descriptions</li>
         <li>We develop a cross-attention semantic adapter integrating token-level text embeddings with global video features via prompt learning, enabling precise alignment between visual events and sound</li>
         <li>We develop a probabilistic temporal adapter that adjusts audio generation based on action prominence replacing binary synchronization.</li>
-    </ul>
-    <p>Extensive experiments demonstrate that FoleyMaster achieves state-of-the-art V2A performance across all metrics. Demo and dataset are available.</p>
+    </ul> -->
+    
   </section>
+
+  <!-- model structure -->
+  <section class="modelstructure">
+    <h2 style="text-align: center;">Model structure</h2>
+    <hr>
+    <br><br>
+    <div class="image-struct">
+      <img src="images/FoleyMaster.png" alt="示例图片">
+  </div>
+
+
+  </section>
+
+  <!-- contribution -->
+  <section class="contribution">
+    <h2 style="text-align: center;">Contribution</h2>
+    <hr>
+    <br>
+    <ul>
+      <li>We introduce and release VGGSound Plus, a dataset annotated using a powerful multimodal large language model, offering detailed textual descriptions for each video.</li>
+      <li>We develop a new adapter tailored to the V2A problem, leveraging the VGGSound Plus dataset to significantly enhance V2A performance, improving both audio quality and the alignment between audio and video events.</li>
+      <li>We implement a prompt-learning approach to optimize text video interactions. Our experimental results demonstrate that this technique improves the model's ability to understand and generate semantically accurate audio, further boosting V2A performance.</li>
+  </ul>
+    
+  </div>
+  </section>
+
+
+
 
   <!-- 演示部分 -->
   <section class="demos">
-    <h2>Demos</h2>
+    <h2 style="text-align: center;">Demos</h2>
     <hr>
-    <p style="font-size: 18px;">It is recommended to use earphones to hear the demos videos, raise the volume and zoom in the videos.</p>
+    <p style="font-size: 18px;text-align: center;">Version1</p>
     
-    <br></br>
     <div class="big-demo">
       <video controls>
         <source src="videos/Foley_for_Nezha_Demo.mp4" type="video/mp4">
@@ -66,18 +97,35 @@
     
     </div>
   <br><br>
-    <div class="audio-container">
+    <!-- <div class="audio-container">
       <audio src="demos/FoleyVersion_1.WAV" type="audio/wav" controls></audio>
       <audio src="demos/FoleyVersion_2.WAV" type="audio/wav" controls></audio>
       <audio src="demos/FoleyVersion_3.WAV" type="audio/wav" controls></audio>
+  </div> -->
+  <div class="littledemo-row">
+    <div class="littledemo-item">
+      <!-- <h3>Ground Truth</h3> -->
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Playing Drum</p>
+    </div>
+    <div class="littledemo-item">
+      <!-- <h3>Baseline</h3> -->
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Playing Drum</p>
+    </div>
   </div>
-
     
   </section>
 
   <br><br>
   <section class="vggsoundplus">
-  <h2>Vggsound Plus</h2>
+  <h2 style="text-align: center;">Vggsound Plus</h2>
   <hr>
   <p>coming soon</p>
 <div class="demo-row">

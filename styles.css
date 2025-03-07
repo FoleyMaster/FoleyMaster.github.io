@@ -4,12 +4,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* font - family: Arial, sans - serif; */
-    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font - family: Arial, sans - serif;
+    /* font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; */
     margin: 0;
     padding: 0;
     line - height: 1.6;
     min-height: 100vh;
+    background-image:url("images/2.png");
+    /* 设置背景图片不重复 */
+    background-repeat: no-repeat;
+    /* 设置背景图片宽度为 100%，高度自动（保留原图高度） */
+    background-size: 100% 15%;
   }
   
 header {
@@ -20,7 +25,7 @@ header {
   
 header h1 {
     margin - bottom: 20px;
-    font-size:38px;
+    /* font-size:42px; */
   }
   
 .author{
@@ -30,6 +35,7 @@ header h1 {
 
   .button - group {
     text - align: center; /* 让按钮组内的按钮居中 */
+    
   }
   
 .button - group a {
@@ -40,30 +46,89 @@ header h1 {
     color: white;
     text - decoration: none;
     border - radius: 5px;
+    
   }
   
-.description {
+/* .description {
     padding: 50px;
     text - align: center;
     width: 50%; /* 可根据需要调整宽度 */
-    /* max-width: 1200px; 可根据需要设置最大宽度 */
+    /* max-width: 1200px; 可根据需要设置最大宽度 
     margin: 0 auto;
     font-size:18px;
   }
-  
+   */
   .abs{
-    padding: 20px;
+    margin-top: 40px; /* 设置与上面元素的间距为 20px */
+    padding: 40px;
     width:70%;
     font-size:18px;
-    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.5; /* 使用无单位数字，推荐方式，会根据字体大小自动调整 */
+    letter-spacing: 0.6px;
+    /* font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; */
   }
+
+  
+
+.modelstructure {
+    
+  padding: 20px;
+  width:70%;
+}
+.image-container {
+  text-align: center;
+}
+img {
+  max-width: 85%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.contribution {
+    
+  padding: 20px;
+  width:70%;
+  font-size:18px;
+    line-height: 1.5; /* 使用无单位数字，推荐方式，会根据字体大小自动调整 */
+    letter-spacing: 0.6px;
+}
+
+
   .demos {
     
     padding: 20px;
     width:70%;
   }
+  .big-demo{
+    text-align: center;
+  }
+  .big-demo video{
+    
+    max-width: 80%;
+  max-height: 100%;
+  }
+
+  .littledemo-row {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 100%;
+
+    display: flex;  /* 使用 Flexbox 实现一行布局 */
+    justify-content: space-between;  /* 水平分布，每个视频之间有间距 */
+    flex-wrap: wrap;  /* 如果屏幕太小，视频会自动换行 */
+  }
+  
+  .littledemo-item {
+    padding:0px;
+    width: 45%;  设置每个视频占用的宽度，可以根据需要调整
+    margin: 10px 0;  /* 设置视频之间的垂直间距 */
+    text-align: center;  中心对齐视频标题
+  }
   
   .demo-row {
+
     display: flex;  /* 使用 Flexbox 实现一行布局 */
     justify-content: space-between;  /* 水平分布，每个视频之间有间距 */
     flex-wrap: wrap;  /* 如果屏幕太小，视频会自动换行 */
