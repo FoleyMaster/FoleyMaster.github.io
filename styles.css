@@ -14,7 +14,7 @@ body {
     /* 设置背景图片不重复 */
     background-repeat: no-repeat;
     /* 设置背景图片宽度为 100%，高度自动（保留原图高度） */
-    background-size: 100% 17%;
+    background-size: 100% 16%;
   }
   
 header {
@@ -134,7 +134,7 @@ img {
   }
   
   .demo-row {
-    margin-bottom: 180px;
+    /* margin-bottom: 180px; */
     display: flex;  /* 使用 Flexbox 实现一行布局 */
     justify-content: space-between;  /* 水平分布，每个视频之间有间距 */
     flex-wrap: wrap;  /* 如果屏幕太小，视频会自动换行 */
